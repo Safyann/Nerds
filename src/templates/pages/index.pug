@@ -1,0 +1,82 @@
+extends ../template
+
+block variables
+  - var title = 'Веб-студия Nerds'
+
+block content
+  .wrapper
+    include ../common/header.pug
+    main.content
+      section.slider
+        .container
+          .slider__desc
+            h2.slider__title Долго, дорого, скрупулезно.
+            p.slider__text Математически выверенный дизайн для вашегосайта или мобильного приложения.
+            a(href="#").slider__btn Узнать больше
+          .slider__img
+            img(src="", alt="").slider__pic
+      section.services
+        .container
+          ul.service__list
+            li.service__item
+              .service__top
+                img(src="", alt="")
+              .service__bottom
+                h3.service__title Веб-сайты
+                p.srvice__desc Мир никогда не будет прежним после того как увидит ваш сайт!
+                button.service__btn.red Заказать
+            li.service__item
+              .service__top
+                img(src="", alt="")
+              .service__bottom
+                h3.service__title Приложения
+                p.srvice__desc Покорите топ-10 приложений в AppStore и Google Play
+                button.service__btn.green Заказать
+            li.service__item
+              .service__top
+                img(src="", alt="")
+              .service__bottom
+                h3.service__title Презентации
+                p.srvice__desc Вы даже не подозреваете, насколько вы изумительны!
+                button.service__btn.yellow Заказать
+      section.about
+        .container
+          .column__left
+            h1.title__about Мы - маленькая, но гордая дизайн студия из Краснодара.
+            p.about__text Иследуюм принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
+            .about__service Выполняем заказы на разработку
+            ul.about__service__list
+              li.about__service__item Веб-сайтов любой сложности
+              li.about__service__item Мобильных приложений для iOS и Android
+              li.about__service__item Слайдшоу и видео для корпоративных презентаций
+          .column__right
+            .logo_compani
+              img(src="", alt="").logo__img
+            p.desc_compani С 2004 года любим точнось во всем:
+            ul.percents__list
+              li.percents__item
+                .percents 146
+                .percents__desc Уровень самотдачи
+              li.percents__item
+                .percents 100
+                .percents__desc Соблюдение сроков
+              li.percents__item
+                .percents 50
+                .percents__desc Минимальная предоплата
+      section.partners
+        .container
+          ul.partner__list
+            li.partner__item
+              a(href="#").partner__link
+                img(src="", alt="").partner__logo
+            li.partner__item
+              a(href="#").partner__link
+                img(src="", alt="").partner__logo
+            li.partner__item
+              a(href="#").partner__link
+                img(src="", alt="").partner__logo
+            li.partner__item
+              a(href="#").partner__link
+                img(src="", alt="").partner__logo
+    include ../common/map.pug
+  include ../common/footer.pug

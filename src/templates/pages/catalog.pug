@@ -1,0 +1,143 @@
+extends ../template
+
+block variables
+  - var title = 'Магазин готовых шаблонов Nerds'
+
+block content
+  .wrapper
+    include ../common/header.pug
+    main.content
+      .title__block
+        hi.title Магазин готовых шаблонов
+      ul.filter
+        li.filter__item
+          form(action="/").filter__price
+            h2.filter__title Стоимость:
+            ul.price__list
+              li.price__item
+        li.filter__item
+          form(action="/").filter__mesh
+            h2.filter__title Сетка:
+            ul.mesh__list
+              li.mesh__item
+                label.form__label.form__label-radio
+                  input.form__radio(type="radio" name="group" value="Адаптивная")
+                  span.form__radio-fake
+                  span.form__label Адаптивная
+              li.mesh__item
+                label.form__label.form__label-radio
+                  input.form__radio(type="radio" name="group" value="Адаптивная")
+                  span.form__radio-fake
+                  span.form__label Фиксированная
+              li.mesh__item
+                label.form__label.form__label-radio
+                  input.form__radio(type="radio" name="group" value="Адаптивная")
+                  span.form__radio-fake
+                  span.form__label Резиновая
+        li.filter__item
+          form(action="/").filter__features
+            h2.filter__title Особенности:
+            ul.feature__list
+              li.feature__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="feature" value="Слайдер" checked)
+                  span.form__chekbox-fake
+                  span.form__label Слайдер
+              li.feature__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="feature" value="Блок преимуществ")
+                  span.form__chekbox-fake
+                  span.form__label Блок преимуществ
+              li.feature__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="feature" value="Новости" checked)
+                  span.form__chekbox-fake
+                  span.form__label Новости
+              li.feature__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="feature" value="Галерея")
+                  span.form__chekbox-fake
+                  span.form__label Галерея
+              li.feature__item
+                label.form__label.form__label-chekbox
+                  input.form__chekbox(type="checkbox" name="feature" value="Корзина")
+                  span.form__chekbox-fake
+                  span.form__label Корзина
+        li.filter__item
+          button.filter__btn Показать
+      .main__content
+        h2.filter__title Сортировать:
+            ul.sort__list
+              li.sort__item
+                button.sort__btn По цене
+              li.sort__item
+                button.sort__btn По типу
+              li.sort__item
+                button.sort__btn По названию
+              ul.sort__btns
+                li.sort__btns__item.active
+                  svg.logo
+                    use(xlink:href='img/icons/sprite.svg#icon-down-dir')
+                li.sort__btns__item
+                  svg.logo
+                    use(xlink:href='img/icons/sprite.svg#icon-up-dir')
+        ul.product__list
+          li.product__item
+            a.product__link(href="#")
+              .poduct__top
+                img(src="", alt="").product__img
+              .product__hidden
+                .product__name Sedona
+                .product__desc Информационный сайт для туристов
+                button.product__price 9 900 руб.
+          li.product__item
+            a.product__link(href="#")
+              .poduct__top
+                img(src="", alt="").product__img
+              .product__hidden
+                .product__name Sedona
+                .product__desc Информационный сайт для туристов
+                button.product__price 9 900 руб.
+          li.product__item
+            a.product__link(href="#")
+              .poduct__top
+                img(src="", alt="").product__img
+              .product__hidden
+                .product__name Sedona
+                .product__desc Информационный сайт для туристов
+                button.product__price 9 900 руб.
+          li.product__item
+            a.product__link(href="#")
+              .poduct__top
+                img(src="", alt="").product__img
+              .product__hidden
+                .product__name Sedona
+                .product__desc Информационный сайт для туристов
+                button.product__price 9 900 руб.
+          li.product__item
+            a.product__link(href="#")
+              .poduct__top
+                img(src="", alt="").product__img
+              .product__hidden
+                .product__name Sedona
+                .product__desc Информационный сайт для туристов
+                button.product__price 9 900 руб.
+          li.product__item
+            a.product__link(href="#")
+              .poduct__top
+                img(src="", alt="").product__img
+              .product__hidden
+                .product__name Sedona
+                .product__desc Информационный сайт для туристов
+                button.product__price 9 900 руб.
+        ul.pagination
+          li.pagination__item
+            a(href="#").pagination__link.active 1
+          li.pagination__item
+            a(href="#").pagination__link 2
+          li.pagination__item
+            a(href="#").pagination__link 3
+          li.pagination__item
+            a(href="#").pagination__link Следующая
+    include ../common/map.pug
+  include ../common/footer.pug
