@@ -1,0 +1,55 @@
+.about__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title__about {
+    margin: 0;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 45px;
+    margin-bottom: 35px;
+}
+
+.about__text {
+    margin: 0;
+    color: $text;
+    margin-bottom: 40px;
+}
+
+.about__service, .desc_compani {
+    font-weight: bold;
+}
+
+.about__service__item {
+    margin-bottom: 35px;
+    &::before {
+        content: "";
+        width: 25px;
+        height: 2px;
+        color: $red;
+        display: inline-block;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.column__right {
+    width: 360px;
+}
+
+.percents__list {
+    display: flex;
+}
+
+.percents {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.percents__desc {
+    margin: 0;
+    color: $text;
+}

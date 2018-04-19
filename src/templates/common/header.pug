@@ -1,15 +1,18 @@
 header.header
-    .container
-        a(href="#").logo__link
+    .container.header_container
+        a(href="index.html").logo__link
             svg.logo
-                use(xlink:href='img/icons/sprite.svg#nerds-logo')
+                use(xlink:href='img/icons/symbol/sprite.svg#nerds-logo')
         ul.navigation__site
-            li.navigation__link
-                a(href="#") Студия
-            li.navigation__link
-                a(href="#") Клиенты
-            li.navigation__link
-                a(href="#") Магазин
-            li.navigation__link
-                a(href="#") Контакты
-        a(href="#").card Корзина
+            li.navigation__item
+                a(href="#").navigation__link Студия
+            li.navigation__item
+                a(href="#").navigation__link Клиенты
+            li.navigation__item
+                a(href="catalog.html").navigation__link Магазин
+            li.navigation__item
+                a(href="#").navigation__link Контакты
+        a(href="#").cart.navigation__link
+            svg.cart__icon
+                use(xlink:href='img/icons/symbol/sprite.svg#cart-icon')
+            .navigation__link  Корзина

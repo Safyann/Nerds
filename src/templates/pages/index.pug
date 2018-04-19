@@ -9,74 +9,93 @@ block content
     main.content
       section.slider
         .container
-          .slider__desc
-            h2.slider__title Долго, дорого, скрупулезно.
-            p.slider__text Математически выверенный дизайн для вашегосайта или мобильного приложения.
-            a(href="#").slider__btn Узнать больше
-          .slider__img
-            img(src="", alt="").slider__pic
+          ul.slider__list
+            li.slider__item
+              .slider__desc
+                h2.slider__title Долго, дорого, скрупулезно.
+                p.slider__text Математически выверенный дизайн для вашего сайта или мобильного приложения.
+                a(href="#").slider__btn Узнать больше
+              .slider__img
+                img(src="../../img/slider/slide1.png", alt="").slider__pic
+            li.slider__item
+              .slider__desc
+                h2.slider__title Любим математику как никто другой.
+                p.slider__text Никакого креатива, только математические формулы для расчета идеальных пропорций.
+                a(href="#").slider__btn Узнать больше
+              .slider__img
+                img(src="../../img/slider/slide2.png", alt="").slider__pic
+            li.slider__item
+              .slider__desc
+                h2.slider__title Только ночь, только хардкор.
+                p.slider__text Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
+                a(href="#").slider__btn Узнать больше
+              .slider__img
+                img(src="../../img/slider/slide3.png", alt="").slider__pic
       section.services
         .container
           ul.service__list
             li.service__item
               .service__top
-                img(src="", alt="")
+                img(src="../../img/services/illustration-1.jpg", alt="").service__img
               .service__bottom
                 h3.service__title Веб-сайты
                 p.srvice__desc Мир никогда не будет прежним после того как увидит ваш сайт!
                 button.service__btn.red Заказать
             li.service__item
               .service__top
-                img(src="", alt="")
+                img(src="../../img/services/illustration-2.jpg", alt="").service__img
               .service__bottom
                 h3.service__title Приложения
                 p.srvice__desc Покорите топ-10 приложений в AppStore и Google Play
                 button.service__btn.green Заказать
             li.service__item
               .service__top
-                img(src="", alt="")
+                img(src="../../img/services/illustration-3.jpg", alt="").service__img
               .service__bottom
                 h3.service__title Презентации
                 p.srvice__desc Вы даже не подозреваете, насколько вы изумительны!
                 button.service__btn.yellow Заказать
       section.about
-        .container
+        .container.about__container
           .column__left
             h1.title__about Мы - маленькая, но гордая дизайн студия из Краснодара.
             p.about__text Иследуюм принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.
-            .about__service Выполняем заказы на разработку
+            .about__service Выполняем заказы на разработку:
             ul.about__service__list
               li.about__service__item Веб-сайтов любой сложности
               li.about__service__item Мобильных приложений для iOS и Android
               li.about__service__item Слайдшоу и видео для корпоративных презентаций
           .column__right
             .logo_compani
-              img(src="", alt="").logo__img
+              img(src="../../img/nerds-illustration.jpg", alt="").logo__img
             p.desc_compani С 2004 года любим точнось во всем:
             ul.percents__list
               li.percents__item
                 .percents 146
+                  sup %
                 .percents__desc Уровень самотдачи
               li.percents__item
                 .percents 100
+                  sup %
                 .percents__desc Соблюдение сроков
               li.percents__item
                 .percents 50
+                  sup %
                 .percents__desc Минимальная предоплата
       section.partners
         .container
           ul.partner__list
             li.partner__item
               a(href="#").partner__link
-                img(src="", alt="").partner__logo
+                img(src="../../img/partners/logo-1.png", alt="").partner__logo
             li.partner__item
               a(href="#").partner__link
-                img(src="", alt="").partner__logo
+                img(src="../../img/partners/logo-2.png", alt="").partner__logo
             li.partner__item
               a(href="#").partner__link
-                img(src="", alt="").partner__logo
+                img(src="../../img/partners/logo-3.png", alt="").partner__logo
             li.partner__item
               a(href="#").partner__link
-                img(src="", alt="").partner__logo
+                img(src="../../img/partners/logo-4.png", alt="").partner__logo
     include ../common/map.pug
   include ../common/footer.pug
