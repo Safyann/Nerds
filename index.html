@@ -3,10 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Веб-студия Nerds</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="width=1200px" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
@@ -32,6 +31,14 @@
       <main class="content">
         <section class="slider">
           <div class="container">
+            <input type="radio" id="btn-1" name="toggle" checked>
+            <input type="radio" id="btn-2" name="toggle">
+            <input type="radio" id="btn-3" name="toggle">
+            <div class="slider-controls">
+              <label for="btn-1"></label>
+              <label for="btn-2"></label>
+              <label for="btn-3"></label>
+            </div>
             <ul class="slider__list">
               <li class="slider__item">
                 <div class="slider__desc">
@@ -131,11 +138,11 @@
         </section>
       </main>
       <section class="map">
-        <div class="container">
-          <div class="contacts"></div>
-          <div class="name__company">Nёrds desing studio</div>
-          <div class="addres">191186, Санкт-Петербург, ул. Б. Конюшенная д. 18/9</div>
-          <div class="number">+7(812)275-75-75</div><a class="contacts__btn" href="#">Напишите нам</a>
+        <div id="map" style="width: 100%; height: 450px;"></div>
+        <div class="contacts">
+          <h3 class="name-company">Nёrds desing studio</h3>
+          <p class="addres">191186, Санкт-Петербург, ул. Б. Конюшенная д. 19/8</p>
+          <p class="addres">тел. +7(812)275-75-75</p><a class="contacts__btn" href="#">Напишите нам</a>
         </div>
       </section>
     </div>
@@ -161,6 +168,30 @@
         </div>
       </div>
     </footer>
+    <section class="modal modal-write">
+      <h2 class="modal__title">Напишите нам</h2>
+      <form class="write-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form__row">
+          <div class="form__column">
+            <label class="modal__label" for="user-name">Ваше имя:</label>
+            <input class="modal__input" id="user-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="form__column">
+            <label class="modal__label" for="user-email">Ваш e-mail:</label>
+            <input class="modal__input" id="user-email" type="email" name="email" placeholder="Для отправки ответа">
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__column">
+            <label class="modal__label" for="user-comment">Текст письма:</label>
+            <textarea class="modal__textarea" id="user-comment" type="text" name="comment" placeholder="В свободной форме"></textarea>
+          </div>
+        </div>
+        <button class="modal-btn" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

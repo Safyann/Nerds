@@ -2,11 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Магазин готовых шаблонов Nerds</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Магазин готовых шаблонов Nёrds</title>
+    <meta content="width=1200px" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
@@ -35,14 +34,28 @@
             <hi class="title">Магазин готовых шаблонов</hi>
           </div>
         </div>
-        <div class="container">
+        <div class="container container-catalog">
           <ul class="filter">
             <li class="filter__item">
               <form class="filter__price" action="/">
                 <h2 class="filter__title">Стоимость:</h2>
-                <ul class="price__list">
-                  <li class="price__item"></li>
-                </ul>
+                <div class="range-filter">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="margin-left: 20%; width: 30%;"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+                  <div class="price-controls">
+                    <label class="min-price">от
+                      <input name="min-price" type="text" value="0">
+                    </label>
+                    <label class="max-price">до
+                      <input name="max-price" type="text" value="15000">
+                    </label>
+                  </div>
+                </div>
               </form>
             </li>
             <li class="filter__item">
@@ -51,7 +64,7 @@
                 <ul class="mesh__list">
                   <li class="mesh__item">
                     <label class="form__label form__label-radio">
-                      <input class="form__radio" type="radio" name="group" value="Адаптивная"><span class="form__radio-fake"></span><span class="form__label">Адаптивная</span>
+                      <input class="form__radio" type="radio" name="group" value="Адаптивная" checked><span class="form__radio-fake"></span><span class="form__label">Адаптивная</span>
                     </label>
                   </li>
                   <li class="mesh__item">
@@ -104,9 +117,10 @@
             </li>
           </ul>
           <div class="main__content">
-            <h2 class="filter__title">Сортировать:
+            <div class="filter-sort">
+              <h2 class="filter__title">Сортировать:</h2>
               <ul class="sort__list">
-                <li class="sort__item">
+                <li class="sort__item active">
                   <button class="sort__btn">По цене</button>
                 </li>
                 <li class="sort__item">
@@ -117,24 +131,24 @@
                 </li>
                 <ul class="sort__btns">
                   <li class="sort__btns__item active">
-                    <svg class="logo">
+                    <svg class="sort__btns_img">
                       <use xlink:href="img/icons/symbol/sprite.svg#icon-down-dir"></use>
                     </svg>
                   </li>
                   <li class="sort__btns__item">
-                    <svg class="logo">
+                    <svg class="sort__btns_img">
                       <use xlink:href="img/icons/symbol/sprite.svg#icon-up-dir"></use>
                     </svg>
                   </li>
                 </ul>
               </ul>
-            </h2>
+            </div>
             <ul class="product__list">
               <li class="product__item"><a class="product__link" href="#">
                   <div class="poduct__top"><img class="product__img" src="img/products/img-sedona.jpg" alt=""></div>
                   <div class="product__hidden">
                     <div class="product__name">Sedona</div>
-                    <div class="product__desc">Информационный сайт для туристов</div>
+                    <p class="product__desc">Информационный сайт для туристов</p>
                     <button class="product__price">9 900 руб.</button>
                   </div></a></li>
               <li class="product__item"><a class="product__link" href="#">
@@ -177,17 +191,17 @@
               <li class="pagination__item"><a class="pagination__link active" href="#">1</a></li>
               <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
               <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-              <li class="pagination__item"><a class="pagination__link" href="#">Следующая</a></li>
+              <li class="pagination__item"><a class="pagination__link next" href="#">Следующая</a></li>
             </ul>
           </div>
         </div>
       </main>
       <section class="map">
-        <div class="container">
-          <div class="contacts"></div>
-          <div class="name__company">Nёrds desing studio</div>
-          <div class="addres">191186, Санкт-Петербург, ул. Б. Конюшенная д. 18/9</div>
-          <div class="number">+7(812)275-75-75</div><a class="contacts__btn" href="#">Напишите нам</a>
+        <div id="map" style="width: 100%; height: 450px;"></div>
+        <div class="contacts">
+          <h3 class="name-company">Nёrds desing studio</h3>
+          <p class="addres">191186, Санкт-Петербург, ул. Б. Конюшенная д. 19/8</p>
+          <p class="addres">тел. +7(812)275-75-75</p><a class="contacts__btn" href="#">Напишите нам</a>
         </div>
       </section>
     </div>
@@ -213,6 +227,30 @@
         </div>
       </div>
     </footer>
+    <section class="modal modal-write">
+      <h2 class="modal__title">Напишите нам</h2>
+      <form class="write-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form__row">
+          <div class="form__column">
+            <label class="modal__label" for="user-name">Ваше имя:</label>
+            <input class="modal__input" id="user-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="form__column">
+            <label class="modal__label" for="user-email">Ваш e-mail:</label>
+            <input class="modal__input" id="user-email" type="email" name="email" placeholder="Для отправки ответа">
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__column">
+            <label class="modal__label" for="user-comment">Текст письма:</label>
+            <textarea class="modal__textarea" id="user-comment" type="text" name="comment" placeholder="В свободной форме"></textarea>
+          </div>
+        </div>
+        <button class="modal-btn" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>
