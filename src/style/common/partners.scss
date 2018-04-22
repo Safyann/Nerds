@@ -5,5 +5,12 @@
 
 .partner__logo {
     opacity: 0.2;
-    transform: translateX()
+    transform: translateX();
+    transition: .6s;
+    &:hover {
+        opacity: 1;
+    }
+    &:active {
+        opacity: .1;
+    }
 }

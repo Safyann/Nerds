@@ -1,0 +1,242 @@
+.filter__title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.filter__item {
+    margin-bottom: 50px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.range-filter {
+    width: 260px;
+}
+
+.range-controls {
+    position: relative;
+    padding: 40px 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: $grey;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: #d7dcde;
+}
+
+.range-controls .bar {
+    width: 70%;
+    height: 2px;
+    background: #00ca74;
+}
+
+.range-controls .toggle {
+    position: absolute;
+    top: 32px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    background: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+}
+
+.range-controls .toggle-min {
+    left: 50px;
+}
+
+.range-controls .toggle-max {
+    left: 120px;
+}
+
+.price-controls {
+    font-size: 0;
+}
+
+.price-controls label {
+    font-size: 16px;
+    display: inline-block;
+    width: 50%;
+}
+
+.max-price {
+    text-align: right;
+}
+
+.price-controls input {
+    font-size: 16px;
+    width: 80px;
+    margin-left: 10px;
+    padding: 8px 10px;
+    text-align: center;
+    color: $text;
+    border: none;
+    border-radius: 5px;
+    background: $grey;
+}
+
+.form__label {
+    color: $text;
+}
+
+.form__label-radio {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.form__radio {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    &-fake {
+        @include circle (16px, #fff);
+        border: 3px solid rgba($color: #4d4d4d, $alpha: .4);
+        position: relative;
+        margin-right: 10px;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            @include circle (0, rgba($color: #4d4d4d, $alpha: .4));
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: width .3s, height .3s;
+        }
+    }
+}
+
+.form__radio:checked {
+    &+.form__radio-fake {
+        &:after {
+            @include circle (5px, rgba($color: #4d4d4d, $alpha: .4));
+        }
+    }
+}
+
+.form__label-chekbox {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.form__chekbox {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    &-fake {
+        width: 20px;
+        height: 20px;
+        border: 2px solid rgba($color: #4d4d4d, $alpha: .4);
+        border-radius: 3px;
+        background: transparent;
+        position: relative;
+        margin-right: 23px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: width .3s, height .3s;
+        }
+    }
+}
+
+.form__chekbox:checked {
+    &+.form__chekbox-fake {
+        &:after {
+            background: url(../../img/icons/checkbox-on.svg) 50% no-repeat;
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.filter__btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 20px 90px;
+    background: $grey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        background: #dfdfdf;
+    }
+    &:active {
+        background: #d5d5d5;
+        box-shadow: 0px 3px 10px 0px #000000 inset;
+        color: rgba($color: black, $alpha: .3);
+    }
+}
+
+.filter-sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.sort__list {
+    display: flex;
+}
+
+.sort__item {
+    margin-right: 25px;
+    opacity: .3;
+    transition: .3s;
+    &.active {
+        opacity: 1;
+    }
+    &:hover {
+        opacity: .6;
+    }
+    &:active {
+        opacity: 1;
+    }
+}
+
+.sort__btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.sort__btns {
+    display: flex;
+}
+
+.sort__btns__item {
+    margin-right: 18px;
+    fill: #a6a6a6;
+    opacity: .3;
+    transition: .3s;
+    &.active {
+        fill: #231f20;
+        opacity: 1;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.sort__btns_img {
+    width: 10px;
+    height: 10px;
+}

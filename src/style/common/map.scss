@@ -1,0 +1,53 @@
+.map {
+    background: url(../../img/bg/map.jpg) center center no-repeat;
+    padding: 0;
+    margin: 80px 0;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../../img/icons/map-marker.png);
+        top: 17%;
+        left: 57%;
+        width: 190px;
+        height: 190px;
+    }
+}
+
+.contacts {
+    width: 320px;
+    background-color: white;
+    padding: 50px;
+    margin: 55px 0;
+}
+
+.name__company {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.addres {
+    margin-bottom: 25px;
+    color: #666666;
+}
+
+.contacts__btn {
+    display: block;
+    padding: 20px 45px;
+    color: white;
+    background: $red;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s;
+    &:hover {
+        background: $medium-red;
+    }
+    &:active {
+        background: $dark-red;
+        box-shadow: 0px 3px 10px 0px #000000 inset;
+        color: rgba($color: white, $alpha: .3);
+    }
+}

@@ -1,0 +1,22 @@
+.title__block {
+    background: $grey;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    margin: 90px auto 115px;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.container-catalog {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main__content {
+    width: 760px;
+}

@@ -9,6 +9,13 @@ block content
     main.content
       section.slider
         .container
+          input(type="radio" id="btn-1" name="toggle" checked)
+          input(type="radio" id="btn-2" name="toggle")
+          input(type="radio" id="btn-3" name="toggle")
+          .slider-controls
+            label(for="btn-1")
+            label(for="btn-2")
+            label(for="btn-3")
           ul.slider__list
             li.slider__item
               .slider__desc

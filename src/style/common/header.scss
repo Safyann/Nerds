@@ -13,6 +13,13 @@
     fill: black;
     width: 160px;
     height: 80px;
+    transition: .3s;
+    &:hover {
+        opacity: .8;
+    }
+    &:active {
+        opacity: .3;
+    }
 }
 
 .navigation__site {
@@ -32,6 +39,17 @@
     text-decoration: none;
     color: black;
     font-weight: 500;
+    transition: .3s;
+    &:hover {
+        color: $red;
+    }
+    &:active {
+        color: black;
+        opacity: .3;
+    }
+    &.active {
+        border-bottom: 2px solid $red;
+    }
 }
 
 .cart {

@@ -27,15 +27,40 @@
 .service__btn {
     border: none;
     color: white;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 20px 40px;
+    transition: .3s;
+    cursor: pointer;
+    
+    &:active {
+        box-shadow: 0px 3px 10px 0px #000000 inset;
+        color: rgba($color: white, $alpha: .3);
+    }
     &.red {
         background: $red;
+        &:hover {
+            background: $medium-red;
+        }
+        &:active {
+            background: $dark-red;
+        }
     }
     &.green {
         background: $green;
+        &:hover {
+            background: $medium-green;
+        }
+        &:active {
+            background: $dark-green;
+        }
     }
     &.yellow {
         background: $yellow;
+        &:hover {
+            background: $medium-yellow;
+        }
+        &:active {
+            background: $dark-yellow;
+        }
     }
 }

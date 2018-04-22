@@ -1,7 +1,7 @@
 extends ../template
 
 block variables
-  - var title = 'Магазин готовых шаблонов Nerds'
+  - var title = 'Магазин готовых шаблонов Nёrds'
 
 block content
   .wrapper
@@ -10,20 +10,29 @@ block content
       .title__block
         .container
           hi.title Магазин готовых шаблонов
-      .container
+      .container.container-catalog
         ul.filter
           li.filter__item
             form(action="/").filter__price
               h2.filter__title Стоимость:
-              ul.price__list
-                li.price__item
+              .range-filter
+                .range-controls
+                  .scale
+                    .bar(style="margin-left: 20%; width: 30%")
+                  .toggle.toggle-min
+                  .toggle.toggle-max
+                .price-controls
+                  label.min-price от
+                    input(name="min-price" type="text" value="0")
+                  label.max-price до
+                    input(name="max-price" type="text" value="15000")
           li.filter__item
             form(action="/").filter__mesh
               h2.filter__title Сетка:
               ul.mesh__list
                 li.mesh__item
                   label.form__label.form__label-radio
-                    input.form__radio(type="radio" name="group" value="Адаптивная")
+                    input.form__radio(type="radio" name="group" value="Адаптивная" checked)
                     span.form__radio-fake
                     span.form__label Адаптивная
                 li.mesh__item
@@ -68,21 +77,22 @@ block content
           li.filter__item
             button.filter__btn Показать
         .main__content
-          h2.filter__title Сортировать:
-              ul.sort__list
-                li.sort__item
-                  button.sort__btn По цене
-                li.sort__item
-                  button.sort__btn По типу
-                li.sort__item
-                  button.sort__btn По названию
-                ul.sort__btns
-                  li.sort__btns__item.active
-                    svg.logo
-                      use(xlink:href='img/icons/symbol/sprite.svg#icon-down-dir')
-                  li.sort__btns__item
-                    svg.logo
-                      use(xlink:href='img/icons/symbol/sprite.svg#icon-up-dir')
+          .filter-sort
+            h2.filter__title Сортировать:
+            ul.sort__list
+              li.sort__item.active
+                button.sort__btn По цене
+              li.sort__item
+                button.sort__btn По типу
+              li.sort__item
+                button.sort__btn По названию
+              ul.sort__btns
+                li.sort__btns__item.active
+                  svg.sort__btns_img
+                    use(xlink:href='img/icons/symbol/sprite.svg#icon-down-dir')
+                li.sort__btns__item
+                  svg.sort__btns_img
+                    use(xlink:href='img/icons/symbol/sprite.svg#icon-up-dir')
           ul.product__list
             li.product__item
               a.product__link(href="#")
@@ -90,7 +100,7 @@ block content
                   img(src="../../img/products/img-sedona.jpg", alt="").product__img
                 .product__hidden
                   .product__name Sedona
-                  .product__desc Информационный сайт для туристов
+                  p.product__desc Информационный сайт для туристов
                   button.product__price 9 900 руб.
             li.product__item
               a.product__link(href="#")
@@ -140,6 +150,6 @@ block content
             li.pagination__item
               a(href="#").pagination__link 3
             li.pagination__item
-              a(href="#").pagination__link Следующая
+              a(href="#").pagination__link.next Следующая
     include ../common/map.pug
   include ../common/footer.pug
