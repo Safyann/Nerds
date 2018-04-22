@@ -14,5 +14,22 @@ html
 
     body
         block content
+        section.modal.modal-write
+            h2.modal__title Напишите нам
+            form.write-form(action='https://echo.htmlacademy.ru', method='post')
+                .form__row
+                    .form__column
+                        label.modal__label(for='user-name') Ваше имя:
+                        input#user-name.modal__input(type='text', name='name', placeholder='Представьтесь, пожалуйста')
+                    .form__column
+                        label.modal__label(for='user-email') Ваш e-mail:
+                        input#user-email.modal__input(type='email', name='email', placeholder='Для отправки ответа')
+                .form__row
+                    .form__column
+                        label.modal__label(for='user-comment') Текст письма:
+                        textarea#user-comment.modal__textarea(type='text', name='comment', placeholder='В свободной форме')
+                button.modal-btn(type='submit') Отправить
+            button.modal-close(type='button') Закрыть
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
         script(src='js/main.min.js')
         
